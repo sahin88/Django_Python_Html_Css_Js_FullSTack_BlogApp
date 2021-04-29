@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load  static %}
+{% block content%}
+
+<div class="contact-div">
+    <div class="contact-header">
+        <h2 class="contact-header-h2">Contact with me</h2>
+        <p>By filling the required fields you can reach me !</p>
+    </div>
+    <div class="contact-body">
+    <div class="contact-div-left">
+        <h3  class="contact-div-left-h3"> E-mail Form</h3>
+        <form>
+            <div class="input-row">
+                <div class="input-col">
+                    <label for=""> Name</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-col">
+                    <label for=""> Phone</label>
+                    <input placeholder="Enter your Phone">
+                </div>
+            </div>
+            <div class="input-row">
+                    <div class="input-col">
+                        <label for=""> Email </label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="input-col">
+                        <label for="">Subject </label>
+                        <input placeholder="Enter your Subject">
+                    </div>
+            </div>
+            <label for="">Message</label>
+            <textarea placeholder="Enter your message here!" rows="5"></textarea>
+            <button>Send Mail</button>
+    
+        </form>
+    </div>
+    <div class="contact-div-right">
+        <h3 class="contact-div-right-h3"> My Contact Info</h3>
+        <table>
+            <tr>
+                <td><i class="far fa-envelope icons"></i></td>
+                <td>johndoe@mail.com</td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-phone icons"></i></td>
+                <td>+1 405 363 45 </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-map-marker-alt icons"></i></td>
+                <td>John Doe Street 16   New York,<br> NY, United States</td>
+            </tr>
+        </table>
+        <!-- <div class="contact-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzM2FQt3j_kgl_dtaSQdeT_JnmeEWXkVJ3Fg&usqp=CAU);"> -->
+            
+        </div>
+      
+
+    </div>
+    <div class="contact-body-bottom-google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54941.69152272776!2d13.341911015275043!3d52.51348108357323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2sBerlin!5e0!3m2!1sde!2sde!4v1617862354728!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+</div>
+</div>
+
+{% endblock %}

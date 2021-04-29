@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="{% static  'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+  <link href="{% static  'css/style.css' %}" rel="stylesheet">
+  <link href="{% static  'css/lightbox.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- Custom styles for this template
+  <link href="{% static  'css/modern-business.css' %}" rel="stylesheet"> -->
+  <script src="{%  static 'js/script.js'%}" defer ></script>
+  <script src="{%  static 'js/lightbox.js'%}" defer ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="nav-logo">
+      Halil Ugur
+    </div>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <div class="nav-ul">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </div>
+
+   
+  </nav>
+  <!-- Page Content -->
+  {% block content%}
+  
+  
+  
+  {% endblock %}
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="{% static  'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static  'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script> -->
+
+  <!-- Contact form JavaScript -->
+  <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+
+
+</body>
+<footer  >
+  <div class="footer-div">
+  <div class="icon-div-footer">
+          
+    <div class="icon-bg fb">
+        <i class="fab fa-facebook-f icons fb"></i>
+    </div>
+    <div class="icon-bg twt">
+        <i class="fab fa-twitter twt"></i>
+    </div>
+    <div class="icon-bg ytb">
+        <i class="fab fa-youtube  ytb"></i>
+    </div>
+</div>
+</div>
+</footer>
+
+</html>
