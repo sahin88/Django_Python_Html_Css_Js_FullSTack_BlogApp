@@ -8,7 +8,11 @@
 
 ## Appview
 
-<img src="https://github.com/sahin88/Django-_Dropping_Word_App/blob/main/desktop_view.jpeg"  width="400px" height="400px">.
+<img src="https://github.com/sahin88/Django_Python_Html_Css_Js_FullSTack_BlogApp/blob/main/blog_app_one.png"  width="400px" height="400px">.
+
+<img src="https://github.com/sahin88/Django_Python_Html_Css_Js_FullSTack_BlogApp/blob/main/blog_app_two.png"  width="400px" height="400px">.
+
+<img src="https://github.com/sahin88/Django_Python_Html_Css_Js_FullSTack_BlogApp/blob/main/blog_app_three.png"  width="400px" height="400px">.
 
 ## Entity Relationship Diagram
 
