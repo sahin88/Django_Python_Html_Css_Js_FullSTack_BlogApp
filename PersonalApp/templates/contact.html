@@ -10,25 +10,25 @@
     <div class="contact-body">
     <div class="contact-div-left">
         <h3  class="contact-div-left-h3"> E-mail Form</h3>
-        <form>
+        <form method="POST" action="/send_mail"> {% csrf_token %}
             <div class="input-row">
                 <div class="input-col">
                     <label for=""> Name</label>
-                    <input type="text" placeholder="Enter your name">
+                    <input type="text" name="name" placeholder="Enter your name"  id="name" required data-validation-required-message="Please enter your name.">
                 </div>
                 <div class="input-col">
                     <label for=""> Phone</label>
-                    <input placeholder="Enter your Phone">
+                    <input placeholder="Enter your Phone" name="phone" id="phone" required data-validation-required-message="Please enter your phone." >
                 </div>
             </div>
             <div class="input-row">
                     <div class="input-col">
                         <label for=""> Email </label>
-                        <input type="text" placeholder="Enter your name">
+                        <input type="text" placeholder="Enter your name" name="email" id="email" required data-validation-required-message="Please enter your email.">
                     </div>
                     <div class="input-col">
                         <label for="">Subject </label>
-                        <input placeholder="Enter your Subject">
+                        <input placeholder="Enter your Subject" placeholder="Enter  email subject" name="subject" id="email" required data-validation-required-message="Please enter your email subject.">
                     </div>
             </div>
             <label for="">Message</label>
@@ -42,16 +42,16 @@
         <table>
             <tr>
                 <td><i class="far fa-envelope icons"></i></td>
-                <td>johndoe@mail.com</td>
+                <td>{{contact_info.email}}</td>
             </tr>
 
             <tr>
                 <td><i class="fas fa-phone icons"></i></td>
-                <td>+1 405 363 45 </td>
+                <td>{{contact_info.phone_nr}} </td>
             </tr>
             <tr>
                 <td><i class="fas fa-map-marker-alt icons"></i></td>
-                <td>John Doe Street 16   New York,<br> NY, United States</td>
+                <td>{{contact_info.adress}}</td>
             </tr>
         </table>
         <!-- <div class="contact-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzM2FQt3j_kgl_dtaSQdeT_JnmeEWXkVJ3Fg&usqp=CAU);"> -->

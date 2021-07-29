@@ -5,12 +5,13 @@
     <div class="div-home">
         <div class="div-home-left">
             <div class="div-home-left-text_container">
-                <p>Hello</p>
-                <p> I' am Halil.</p>
-                <p> I am Entreprenuer, Politician and Bussinesman.</p>
+        
+                <p>{{ home_page_items.hello_message }}</p>
+                <p> {{ home_page_items.i_message}}.</p>
+                <p> {{ home_page_items.my_message }}</p>
             </div>
         </div>
-        <div class="div-home-right" style="background-image: url('static/images/img/halil_main.jpeg');">
+        <div class="div-home-right" style="background-image: url(' {{ home_page_items.main_image.url }}');">
             
         </div>
 

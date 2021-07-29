@@ -3,15 +3,19 @@
 {% block content %}
 
 <div class="post-div">
-
+    {% for post in posts%}
     <div class="card">
-        <div class="card-image" style="background-image: url(https://images03.nicepage.io/a1389d7bc73adea1e1c1fb7e/418e5cfcbc765e8a82aafffd/pexels-photo-2008426.jpeg?version=);"></div>
+        <div class="card-image" style="background-image: url({{post.post_image_one.url}});"></div>
         <div class="card-text">
-            <h3>Head Line</h3>
-            <p> Fri Jun 2021 |Comments | Likes</p>
-            <a> Read More</a>
+            <h4>{{post.post_head}}</h4>
+            <p> {{post.post_date}}</p>
+            <form action="{% url 'post_detail' post.id %}">
+                <button type="submit"> Read More</button>
+            </form>
+         
         </div>
     </div>
+    {% endfor%}
     <div class="card">
         <div class="card-image" style="background-image: url(https://images02.nicepage.io/a1389d7bc73adea1e1c1fb7e/cafc6d9ce7f55817832f1816/pexels-photo-3104234.jpeg);"></div>
         <div class="card-text">
@@ -30,5 +34,27 @@
     </div>
 
 
+  
 </div>
+<div class="container">
+    {% if is_paginated %}
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-dark mb-4" href="?page=1" >First</a>
+    <a class="btn btn-outline-dark mb-4" href="?page={{page_obj.previous_page_number}}" >Previous</a>
+    {% endif %}
+  {% endif %}
+    {% for num in page_obj.paginator.page_range  %}
+      {% if page_obj.number == num %}
+        <a class="btn btn-dark mb-4" href="?page={{num}}" >{{num}}</a>
+      {% elif num > page_obj.number|add:'-3'  and num < page_obj.number|add:'+3' %}
+         <a class="btn btn- outline-dark mb-4" href="?page={{num}}">{{num}}</a>
+      {% endif %}
+    {% endfor%}
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-dark mb-4" href="?page={{obj.paginator.num_pages}}" >First</a>
+    <a class="btn btn-outline-dark mb-4" href="?page={{page_obj.next_page_number}}" >Next</a>
+    {% endif %}
+</div>
+
+
 {% endblock %}
